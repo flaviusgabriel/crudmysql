@@ -1,0 +1,13 @@
+versin: '2.1'
+services:
+  database-postgress:
+    container_name: postgres-db
+    image: postgress:11.2
+    enviroment:
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=user
+      - POSTGRES_DB=postgres
+    ports:
+    - "5432:5432"
+    volumes:
+    - ./postgres-data:/var/lib/postgresql/data
